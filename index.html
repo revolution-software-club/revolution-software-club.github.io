@@ -14,25 +14,6 @@
         crossorigin="anonymous"></script>
     <title>RSDC | Home</title>
     <style>
-
-        /*
-            navbar css
-        */
-        #navbarSupportedContent{
-            margin-left: 550px;
-
-        }
-        .nav-item{
-            margin-left: 30px;
-        }
-        .btn{
-            margin-left: 30px;
-        }
-        #logo{
-            width: 64px;
-            margin-right: 10px;
-            border-radius: 50%;
-        }
         /* main contain */
 
         .card{
@@ -53,40 +34,43 @@
 </head>
 <body>
     <!--====== NAVBAR ======-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-        <img id="logo" src="..\Images\logo.jpg" alt="">
-        Revolution Software Development Club
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0"">
-              <li class="nav-item">
-                <a class="nav-link" href="pages/about.html">About us</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Departments
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Design</a></li>
-                  <li><a class="dropdown-item" href="#">HR</a></li>
-                  <li><a class="dropdown-item" href="#">Project</a></li>
-                  <li><a class="dropdown-item" href="#">Social</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Tech</a></li>
+    <nav class="navbar navbar-expand-sm navbar-light">
+        <div class="container-fluid ">
+            <img id="logo" src="..\Images\rsdc_logo.svg" alt="">
+            <h4><b> Revolution Software Club </b></h4>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav ">
+                    <li class=" nav-item">
+                        <a class="nav-link" href="#">About us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Departments
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Leads</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                    <button class="btn btn-outline-dark" type="submit">Join Now</button>
                 </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="pages/leads.html">Leads</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="pages/blog/blog1.html">Blog</a>
-              </li>
-              <button class="btn btn-outline-dark" type="submit">Join Now</button>
-            </ul>
-          </div>
+            </div>
         </div>
     </nav>
 
