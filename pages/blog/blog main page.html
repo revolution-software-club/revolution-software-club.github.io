@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>blogs Page</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+  <style>
+    body {
+      margin: 0; /* Add this to remove default margin */
+      padding: 0; /* Add this to remove default padding */
+      box-sizing: border-box; /* Add this to include padding and border in the total width and height */
+    }
+
+    /* Styles for the search bar */
+.search-container {
+  width: 45%; /* Set the width to 45% */
+  margin: 0 auto; /* Center the container horizontally */
+  margin-bottom: 20px;
+  position: relative;
+}
+
+input[type="search"] {
+  height: 40px;
+  padding: 5px 35px 5px 5px;
+  border: 1px solid #555;
+  width: calc(100% - 40px);
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  transform: translateY(-50%);
+  color: #555;
+  cursor: pointer;
+}
+
+    /* Custom styles */
+    .blog-posts-container {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .content {
+      padding: 2rem;
+    }
+
+    .blog-post {
+      width: calc(25% - 20px); /* Adjusted width for responsiveness */
+      margin: 10px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 15px;
+      display: none; /* Initially hide all blog posts */
+      position: relative; /* Set position to relative for positioning child elements */
+    }
+
+    .blog-post a:hover,.blog-post a{
+      text-decoration: none;
+    }
+
+    .blog-post img {
+      width: 100%; /* Make images responsive */
+      height: auto;
+      max-height: 250px; /* Limit maximum height for smaller screens */
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+
+    .blog-post h3 {
+      margin-top: 0.1rem;
+    }
+
+    .blog-post p {
+      margin-top: 0.1rem;
+    }
+
+    .blog-post .views {
+      margin-top: auto; /* Push to the bottom */
+      margin-right: -300px; /* Add some space from the right */
+      color: #555;
+    }
+
+    .load-more-button,
+    .show-less-button {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: large;
+      border-radius: 7px;
+      background-color: white;
+      border-color: black;
+      color: black;
+      padding: 10px;
+      display: none; /* Initially hide both buttons */
+    }
+
+    .load-more-button:hover,
+    .show-less-button:hover {
+      cursor: pointer;
+      border-color: blue;
+      color: blue;
+    }
+
+    #logo {
+      width: 64px;
+      margin-right: 12px;
+    }
+
+    @media only screen and (max-width: 768px) {
+      /* Adjust styles for smaller screens */
+      .blog-post {
+        width: calc(50% - 20px); /* Adjusted width for smaller screens */
+      }
+    }
+
+    @media only screen and (max-width: 480px) {
+      /* Further adjust styles for even smaller screens */
+      .blog-post {
+        width: 100%; /* Full width for the smallest screens */
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-white">
+
+  <header>
+    <nav class="navbar navbar-expand-sm navbar-light">
+      <div class="container-fluid ">
+          <img id="logo" src="D:\revolution-software-club\Images\rsdc_logo.svg" alt="">
+          <h4><b> Revolution Software Club </b></h4>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+              <ul class="navbar-nav ">
+                  <li class=" nav-item">
+                      <a class="nav-link" href="#">About us</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          Departments
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li>
+                              <hr class="dropdown-divider">
+                          </li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      </ul>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Leads</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Blog</a>
+                  </li>
+                  <button class="btn btn-outline-dark" type="submit">Join Now</button>
+              </ul>
+          </div>
+      </div>
+  </nav>
+  </header>
+
+      <!-- Search bar container -->
+    <div class="search-container">
+      <input type="search" placeholder="Search your content">
+      <i class="fas fa-search search-icon"></i>
+    </div>
+
+
+   <!-- Blog posts container using a div -->
+    <div class="blog-posts-container">
+      <!-- Blog posts (initially hidden) -->
+
+      <div class="blog-post bg-light">
+        <a href="#">
+          <img src="D:\Revolution club\memes\crick meme bg rm.png" alt="Learn to Code with karji">
+          <h3>Learn to Code with karji</h3>
+          <p>Learn the basics of Python programming with karji</p>
+          <p class="views"><i class="fas fa-eye"></i> 69 Views</p>
+        </a>
+      </div>
+
+      <div class="blog-post bg-light">
+        <a href="#">
+          <img src="D:\Revolution club\memes\crick meme bg rm.png" alt="Learn to Code with karji">
+          <h3>Learn to Code with karji</h3>
+          <p>Learn the basics of Python programming with karji</p>
+          <p class="views"><i class="fas fa-eye"></i> 69 Views</p>
+        </a>
+      </div>
+
+      <div class="blog-post bg-light">
+        <a href="#">
+          <img src="D:\Revolution club\memes\crick meme bg rm.png" alt="Learn to Code with karji">
+          <h3>Learn to Code with karji</h3>
+          <p>Learn the basics of Python programming with karji</p>
+          <p class="views"><i class="fas fa-eye"></i> 69 Views</p>
+        </a>
+      </div>
+
+      <div class="blog-post bg-light">
+        <a href="#">
+          <img src="D:\Revolution club\memes\crick meme bg rm.png" alt="Learn to Code with karji">
+          <h3>Learn to Code with karji</h3>
+          <p>Learn the basics of Python programming with karji</p>
+          <p class="views"><i class="fas fa-eye"></i> 69 Views</p>
+        </a>
+      </div>
+
+      <div class="blog-post bg-light">
+        <a href="#">
+          <img src="D:\Revolution club\memes\crick meme bg rm.png" alt="Learn to Code with karji">
+          <h3>Learn to Code with karji</h3>
+          <p>Learn the basics of Python programming with karji</p>
+          <p class="views"><i class="fas fa-eye"></i> 69 Views</p>
+        </a>
+      </div>
+
+      <div class="blog-post bg-light">
+        <a href="#">
+          <img src="D:\Revolution club\memes\crick meme bg rm.png" alt="Learn to Code with karji">
+          <h3>Learn to Code with karji</h3>
+          <p>Learn the basics of Python programming with karji</p>
+          <p class="views"><i class="fas fa-eye"></i> 69 Views</p>
+        </a>
+      </div>
+
+      <div class="blog-post bg-light">
+        <a href="#">
+          <img src="D:\Revolution club\memes\crick meme bg rm.png" alt="Learn to Code with karji">
+          <h3>Learn to Code with karji</h3>
+          <p>Learn the basics of Python programming with karji</p>
+          <p class="views"><i class="fas fa-eye"></i> 69 Views</p>
+        </a>
+      </div>
+
+      <div class="blog-post bg-light">
+        <a href="#">
+          <img src="D:\Revolution club\memes\crick meme bg rm.png" alt="Learn to Code with karji">
+          <h3>Learn to Code with karji</h3>
+          <p>Learn the basics of Python programming with karji</p>
+          <p class="views"><i class="fas fa-eye"></i> 69 Views</p>
+        </a>
+      </div>
+
+      <div class="blog-post bg-light">
+        <a href="#">
+          <img src="D:\Revolution club\memes\crick meme bg rm.png" alt="Learn to Code with karji">
+          <h3>Learn to Code with karji</h3>
+          <p>Learn the basics of Python programming with karji</p>
+          <p class="views"><i class="fas fa-eye"></i> 69 Views</p>
+        </a>
+      </div>
+
+      <div class="blog-post bg-light">
+        <a href="#">
+          <img src="D:\Revolution club\memes\crick meme bg rm.png" alt="Learn to Code with karji">
+          <h3>Learn to Code with karji</h3>
+          <p>Learn the basics of Python programming with karji</p>
+          <p class="views"><i class="fas fa-eye"></i> 69 Views</p>
+        </a>
+      </div>
+
+      <div class="blog-post bg-light">
+        <a href="#">
+          <img src="D:\Revolution club\memes\crick meme bg rm.png" alt="Learn to Code with karji">
+          <h3>Learn to Code with karji</h3>
+          <p>Learn the basics of Python programming with karji</p>
+          <p class="views"><i class="fas fa-eye"></i> 69 Views</p>
+        </a>
+      </div>
+
+      <div class="blog-post bg-light">
+        <a href="#">
+          <img src="D:\Revolution club\memes\crick meme bg rm.png" alt="Learn to Code with karji">
+          <h3>Learn to Code with karji</h3>
+          <p>Learn the basics of Python programming with karji</p>
+          <p class="views"><i class="fas fa-eye"></i> 69 Views</p>
+        </a>
+      </div>
+
+      <div class="blog-post bg-light">
+        <a href="#">
+          <img src="D:\Revolution club\memes\crick meme bg rm.png" alt="Learn to Code with karji">
+          <h3>Learn to Code with karji</h3>
+          <p>Learn the basics of Python programming with karji</p>
+          <p class="views"><i class="fas fa-eye"></i> 69 Views</p>
+        </a>
+      </div>
+
+      <div class="blog-post bg-light">
+        <a href="#">
+          <img src="D:\Revolution club\memes\crick meme bg rm.png" alt="Learn to Code with karji">
+          <h3>Learn to Code with karji</h3>
+          <p>Learn the basics of Python programming with karji</p>
+          <p class="views"><i class="fas fa-eye"></i> 69 Views</p>
+        </a>
+      </div>
+
+      <div class="blog-post bg-light">
+        <a href="#">
+          <img src="D:\Revolution club\memes\crick meme bg rm.png" alt="Learn to Code with karji">
+          <h3>Learn to Code with karji</h3>
+          <p>Learn the basics of Python programming with karji</p>
+          <p class="views"><i class="fas fa-eye"></i> 69 Views</p>
+        </a>
+      </div>
+
+      <div class="blog-post bg-light">
+        <a href="#">
+          <img src="D:\Revolution club\memes\crick meme bg rm.png" alt="Learn to Code with karji">
+          <h3>Learn to Code with karji</h3>
+          <p>Learn the basics of Python programming with karji</p>
+          <p class="views"><i class="fas fa-eye"></i> 69 Views</p>
+        </a>
+      </div>
+    </div>
+
+    <!-- Load more and show less buttons -->
+    <div class="d-flex justify-content-center text-center">
+    <button class="btn btn-primary load-more-button" onclick="loadMore()">Load More</button>
+    <button class="btn btn-secondary show-less-button" onclick="showLess()">Show Less</button></div>
+  </div>
+
+  <footer class="mt-5 bg-light">
+    <div class="container">
+      <p class="text-center">Revolution Software Development Club &copy; 2024</p>
+      <p class="text-center">
+        <a href="#">Instagram</a> |
+        <a href="#">LinkedIn</a> |
+        <a href="#">Email</a> |
+        <a href="#">Contact Us</a> |
+        <a href="#">FAQs</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3yQ3a3vxZopf9r91q6v16z90neUb5F41kBuYXRQfF0cFA3D2AytyQLquRwD"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script>
+    // JavaScript functions for handling load more and show less functionality
+  
+    const blogPosts = document.querySelectorAll(".blog-post");
+    let postsVisible = 8; // Initially show 8 posts
+  
+    // Initially hide all blog posts
+    blogPosts.forEach((post, index) => {
+      post.style.display = index < postsVisible ? "flex" : "none";
+    });
+  
+    document.addEventListener("DOMContentLoaded", function () {
+      updateButtonVisibility(); // Call this function on page load
+    });
+  
+    function loadMore() {
+      postsVisible += 8;
+      togglePostVisibility();
+      updateButtonVisibility();
+    }
+  
+    function showLess() {
+      postsVisible -= 8;
+      togglePostVisibility();
+      updateButtonVisibility();
+    }
+  
+    function togglePostVisibility() {
+      blogPosts.forEach((post, index) => {
+        post.style.display = index < postsVisible ? "flex" : "none";
+      });
+    }
+  
+    function updateButtonVisibility() {
+      const loadMoreButton = document.querySelector(".load-more-button");
+      const showLessButton = document.querySelector(".show-less-button");
+  
+      setTimeout(() => {
+        loadMoreButton.style.display = postsVisible < blogPosts.length ? "block" : "none";
+        showLessButton.style.display = postsVisible > 8 ? "block" : "none";
+      }, 0);
+    }
+  </script>
+</body>
+
+</html>
