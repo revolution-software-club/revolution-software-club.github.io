@@ -1,0 +1,13 @@
+
+.card{
+    border: none;
+}
+.card-header{
+    border: none;
+}
+
+.banner{
+    width: max-content;
+    height: 300px;
+    object-fit: cover;
+}

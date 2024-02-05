@@ -1,0 +1,92 @@
+/* .row {
+    justify-content: center;
+    text-align: center;
+}
+
+.r1 {
+    width: 40%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.r2 {
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+    padding: 30px;
+    justify-content: flex-start;
+    width: 90%;
+    margin: auto;
+}
+
+.r1 .leads {
+    width: 200px;
+    display: flex;
+    fle
+}
+
+.r1 .leads img {
+    width: 90px;
+    border-radius: 50%;
+}
+
+.r2 .leads img {
+    width: 90px;
+    border-radius: 50%;
+}
+
+.profile {
+    border-width: 3px;
+    border-style: solid;
+    border-color: black;
+}
+
+.linkd {
+    position: relative;
+    top: 20px;
+    right: 18px;
+    background-color: white;
+}
+
+.linkd2 {
+    position: relative;
+    top: 20px;
+    right: 18px;
+    background-color: white;
+}
+
+#logo {
+    width: 64px;
+    margin-right: 12px;
+}
+
+@media screen and (max-width: 480px) {
+    .r1 {
+        width: 60%;
+    }
+
+    .leads {
+        width: 150px;
+        padding: 20px;
+    }
+
+    .linkd2 {
+        position: relative;
+        top: -30px;
+        right: -70px;
+        background-color: white;
+    }
+} */
+
+
+.card{
+    border-color: white;
+    box-shadow: 0 10px 20px rgba(159, 159, 159, 0), 0 4px 6px rgba(0,0,0,0.23);
+}
+
+.card .profile{
+    width: 100px;
+    padding: 10px;
+}
