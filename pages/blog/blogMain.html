@@ -14,6 +14,7 @@
   <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
     integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
     crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./blogMain.css">
 </head>
@@ -73,7 +74,7 @@
   <!-- main content -->
   <section class=" my-5">
     <div class="container">
-      <div class="row">
+      <div class="row" id="blog-posts-container">
 
         <div class="col-md-6 col-lg-4">
           <div class="card my-3">
@@ -194,6 +195,133 @@
             </div>
           </div>
         </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card my-3">
+            <div class="d-flex align-items-center justify-content-center">
+              <img src="../../Images/rsdc_logo.svg" class="card-image-top" alt="">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title"><a href="#" class="text-secondary">What is HTML</a></h3>
+              <p class="card-text">HTML stands for Hyper Text Markup Language, It helps to learn web development and
+                designing. </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">Read More</a>
+                <div>
+                  <i class="fas fa-eye"></i>
+                  <span> 67 Views</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card my-3">
+            <div class="d-flex align-items-center justify-content-center">
+              <img src="../../Images/rsdc_logo.svg" class="card-image-top" alt="">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title"><a href="#" class="text-secondary">What is HTML</a></h3>
+              <p class="card-text">HTML stands for Hyper Text Markup Language, It helps to learn web development and
+                designing. </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">Read More</a>
+                <div>
+                  <i class="fas fa-eye"></i>
+                  <span> 67 Views</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card my-3">
+            <div class="d-flex align-items-center justify-content-center">
+              <img src="../../Images/rsdc_logo.svg" class="card-image-top" alt="">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title"><a href="#" class="text-secondary">What is HTML</a></h3>
+              <p class="card-text">HTML stands for Hyper Text Markup Language, It helps to learn web development and
+                designing. </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">Read More</a>
+                <div>
+                  <i class="fas fa-eye"></i>
+                  <span> 67 Views</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card my-3">
+            <div class="d-flex align-items-center justify-content-center">
+              <img src="../../Images/rsdc_logo.svg" class="card-image-top" alt="">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title"><a href="#" class="text-secondary">What is HTML</a></h3>
+              <p class="card-text">HTML stands for Hyper Text Markup Language, It helps to learn web development and
+                designing. </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">Read More</a>
+                <div>
+                  <i class="fas fa-eye"></i>
+                  <span> 67 Views</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card my-3">
+            <div class="d-flex align-items-center justify-content-center">
+              <img src="../../Images/rsdc_logo.svg" class="card-image-top" alt="">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title"><a href="#" class="text-secondary">What is HTML</a></h3>
+              <p class="card-text">HTML stands for Hyper Text Markup Language, It helps to learn web development and
+                designing. </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">Read More</a>
+                <div>
+                  <i class="fas fa-eye"></i>
+                  <span> 67 Views</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card my-3">
+            <div class="d-flex align-items-center justify-content-center">
+              <img src="../../Images/rsdc_logo.svg" class="card-image-top" alt="">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title"><a href="#" class="text-secondary">What is HTML</a></h3>
+              <p class="card-text">HTML stands for Hyper Text Markup Language, It helps to learn web development and
+                designing. </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-primary">Read More</a>
+                <div>
+                  <i class="fas fa-eye"></i>
+                  <span> 67 Views</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Load more and show less buttons -->
+    <div class="text-center">
+      <button class="btn btn-primary load-more-button">Load More</button>
+      <button class="btn btn-secondary show-less-button" style="display:none;">Show Less</button>
+    </div>
+
       </div>
     </div>
   </section>
@@ -238,6 +366,46 @@
     <!-- Grid container -->
   </footer>
 
+
+  <script>
+    // JavaScript for load more and show less functionality
+    $(document).ready(function () {
+      // Initial number of visible posts
+      var visiblePosts = 6;
+  
+      // Function to toggle visibility of blog posts
+      function togglePostsVisibility() {
+        $("#blog-posts-container .card").slice(0, visiblePosts).show();
+        $("#blog-posts-container .card").slice(visiblePosts).hide();
+      }
+  
+      // Call the function initially
+      togglePostsVisibility();
+  
+      // Function to load more posts
+      $(".load-more-button").click(function () {
+        visiblePosts += 6;
+        togglePostsVisibility();
+        // Show the show less button
+        $(".show-less-button").show();
+        // Check if all posts are visible, then hide load more button
+        if ($("#blog-posts-container .card:hidden").length === 0) {
+          $(".load-more-button").hide();
+        }
+      });
+  
+      // Function to show less posts
+      $(".show-less-button").click(function () {
+        visiblePosts = 6;
+        togglePostsVisibility();
+        // Hide the show less button
+        $(".show-less-button").hide();
+        // Show the load more button
+        $(".load-more-button").show();
+      });
+    });
+  </script>  
+    
 </body>
 
 </html>
