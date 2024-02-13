@@ -55,4 +55,11 @@ a:link {
 
 .card img{
     width: 200px;
+
+}
+
+/* Load more and show less buttons */
+.load-more-button,
+.show-less-button {
+  margin-top: 20px;
 }
