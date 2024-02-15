@@ -1,11 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RSDC | blog 1</title>
+  <link rel="stylesheet" href="blog-post.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 </head>
 <body>
-    <p>Blog 1</p>
+
+<!--====== NAVBAR ======-->
+<nav class="navbar navbar-expand-sm navbar-light">
+    <div class="container">
+      <a
+        href="../../../index.html" class="d-flex align-items-center gap-2 text-decoration-none">
+        <img id="logo" src="../../../Images/rsdc_logo.svg" alt="" />
+        <h4 style="color: black"><b> RSDC </b></h4>
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="../../about.html">About us</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false">Departments
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li>
+                <a class="dropdown-item" href="../../departments/HR.html">HR Department</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../../departments/Tech.html">Technical Department</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../../departments/social.html">Social Department</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../../departments/design.html">Design Department</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../../departments/project.html">Project Department</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../../leads.html">Leads</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../blogMain.html">Blog</a>
+          </li>
+          <button class="btn btn-outline-primary" type="submit">
+            Join Now
+          </button>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- Blog post content -->
+<section class="my-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2">
+        <div class="card my-3">
+          <div class="card-body">
+            <!-- Blog post title -->
+            <h1 class="card-title text-center">Neuromorphic Computing</h1>
+            <!-- Blog post author and date -->
+            <p class="text-center">Written by Aakanksha Darekar</p>
+            <!-- Blog post image -->
+            <div class="d-flex justify-content-center mb-3">
+              <img src="../blogs/content images/neuromorph.jpg" alt="Neuromorphic Computing" class="img-fluid">
+            </div>
+            <!-- Blog post content -->
+            <p class="card-text fw-bold">
+                It is the method of computer engineering in which elements of a computer are customized after the system in the human brain and nervous system. It is also called as neuromorphic engineering.
+            </p>
+            <p>
+                <strong>NEUROMORPHIC TECHNOLOGY CAN BE USED IN THE EXPECTED WAYS:-</strong>
+                <ul type="circle"><li>Autonomous systems, such as robotics, drones, self-driving cars and artificial intelligence.</li>
+                    <li>Deep learning applications.</li>
+                </ul>
+            </p>
+
+            <p>
+                <strong>HOW DOES THIS WORK?</strong>
+                <ul type="circle"><li>Neuromorphic computing begins with installation of Artificial Neural Networks(ANN) which consists of  millions of neurons.</li>
+                    <li>The most common form of neuromorphic hardware is the spiking neural network (SNN). In this hardware, nodes -- or spiking neurons -- process and hold data like biological neurons.Artificial synaptic devices connect spiking neurons. These devices use analog circuitry to transfer electrical signals that mimic brain signals.
+                    </li>
+                </ul>
+            </p>
+
+            <p>
+                <strong>FEATURES OF NEUROMORPHIC COMPUTING:-</strong>
+                <ul type="circle">
+                    <li>Rapid response system</li>
+                    <li>Low consumption of power</li>
+                    <li>Mobile Architecture</li>
+                    <li>Fast-paced learning</li>
+                    <li>High adaptability and plasticity</li>
+                </ul>
+                <strong>CHALLENGES:-</strong>
+                <ul type="circle">
+                    <li>Accuracy</li>
+                    <li>limited software and algorithm</li>
+                    <li>Inaccessible</li>
+                    <li>Benchmarks</li>
+                </ul>
+            </p>
+            <!-- Add more paragraphs as needed -->
+
+            <!-- Back to blog button -->
+            <div class="text-center mt-4">
+              <a href="../blogMain.html" class="btn btn-primary">Back to Blog</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-light">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-10 col-md-12 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Revolution Software Development Club</h5>
+          <p>Connecting Tech Enthusiats</p>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!" class="text-body" style="text-decoration: none">FAQs</a>
+            </li>
+            <li>
+              <a href="#!" class="text-body" style="text-decoration: none">Get Help</a>
+            </li>
+            <li>
+              <a href="#!" class="text-body" style="text-decoration: none">Contact Support</a>
+            </li>
+            <li>
+              <a href="#!" class="text-body" style="text-decoration: none">Reach Out to Us</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </div>
+    <!-- Grid container -->
+  </footer>
+
+<!-- JavaScript and jQuery links here -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
 </body>
 </html>

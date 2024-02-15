@@ -58,6 +58,17 @@ a:link {
 
 }
 
+.image-container {
+    height: 200px; 
+    overflow: hidden;   
+}
+  
+.image-container img {
+    width: 65%;
+    height: auto;
+    object-fit: cover;
+}
+
 /* Load more and show less buttons */
 .load-more-button,
 .show-less-button {
