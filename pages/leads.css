@@ -88,9 +88,12 @@
 
 .card .profile{
     width: 100px;
+    height: auto;
     padding: 10px;
-}
+
 
 
 .linkedin{
 }
+
+
