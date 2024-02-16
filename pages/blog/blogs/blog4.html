@@ -85,117 +85,68 @@
         <div class="card my-3">
           <div class="card-body">
             <!-- Blog post title -->
-            <h1 class="card-title text-center">JS Events</h1>
+            <h1 class="card-title text-center">Functions in C++</h1>
             <!-- Blog post author and date -->
-            <p class="text-center">Written by Sanket Mane</p>
+            <p class="text-center">Written by Sumeet Gupta</p>
             <!-- Blog post image -->
             <div class="d-flex justify-content-center mb-3">
-              <!--add your image here-->
+              <img src="../blogs/content images/cpp.png" alt="cpp image" class="img-fluid">
             </div>
             <!-- Blog post content -->
-            <ol type="1">
-            <li><p class="card-text fw-bold">
-                click event: allows you to respond to user clicks on elements, such as buttons or links.<br>
-                syntax:
-                <pre>
-                    element.addEventListener('click', function(event){
-                        // Do something when the event is clicked.
-                    });
-                </pre>
-            </p></li>
+            <p>
+                <strong>What is a Funtion:<br></strong>
+                This tells the compiler about the function's existence, its name, return type, and parameters (if any).
+                It's like creating a blueprint for the function.
+            </p>
 
-            <li><p class="card-text fw-bold">
-                mouseover event: allows you to respond to when the user hovers over an element, allowing you to show more information or change the element's appearance.<br>
-                syntax:
-                <pre>
-                    element.addEventListener('mouseover', function(event){
-                        // Do something when the mouse enters the element.
-                    });
-                </pre>
-            </p></li>
+            <p>
+                <strong>Syntax:<br></strong>
+                <pre>return_type funtion_name(parameter_list)</pre>
+            </p>
 
-            <li><p class="card-text fw-bold">
-                mouseout event: allows you to respond to when the user stops hovering over an element, allowing you to hide additional information or change the element's appearance back.<br>
-                syntax:
-                <pre>
-                    element.addEventListener('mouseout', function(event){
-                        // Do something when the mouse leaves the element.
-                    });
-                </pre>
-            </p></li>
+            <p>
+                <strong>Key concepts:-</strong>
+                <ul type="circle">
+                    <li><b>Blocks of code: </b>Functions are self-contained units that encapsulate a specific task or calculation. They improve code structure and readability.</li>
+                    <li><b>Declaration and definition: </b>You declare a function's name, return type, and parameters first, and then define its body with statements.</li>
+                    <li><b>Parameters: </b>Variables that receive values when the function is called. They can be passed by value (copy passed) or by reference (original variable modified).</li>
+                    <li><b>Return type: </b>The data type (e.g., int, double, void) of the value the function returns when it finishes execution. void means no value is returned.</li>
+                    <li><b>Calling functions: </b>Use the function name followed by parentheses, optionally with arguments passed within.</li>
+                </ul>
+            </p>
 
-            <li><p class="card-text fw-bold">
-                keydown event: allows you to respond to keyboard input from the user, which can be usefol for creating keyboard shortcuts or interactive applications.<br>
-                syntax:
-                <pre>
-                    element.addEventListener('keydown', function(event){
-                        // Do something when the key is pressed.
-                    });
-                </pre>
-            </p></li>
+            <p>
+                <strong>Common Uses:-</strong>
+                <ul type="circle">
+                    <li><b>Reusability: </b>Create modular, reusable code. Write a function once and use it multiple times throughout your program.</li>
+                    <li><b>Organization: </b>Break down complex tasks into smaller, well-defined functions, making code easier to understand and maintain.</li>
+                    <li><b>Abstraction: </b>Hide implementation details within functions, promoting cleaner interfaces and focus on what the function does.</li>
+                    <li><b>Calculations: </b>Perform computations using functions dedicated to specific calculations.</li>
+                </ul>
+            </p>
 
-            <li><p class="card-text fw-bold">
-                keyup event: allows you to respond when a key is released, which can be useful for creating effects or animations triggered by specific keyboard inputs.<br>
-                syntax:
-                <pre>
-                    element.addEventListener('keyup', function(event){
-                        // Do something when the key is released.
-                    });
-                </pre>
-            </p></li>
+            <p>
+                <strong>Important Notes:-</strong>
+                <ul type="disc">
+                    <li>Function names should be meaningful and descriptive of their purpose.</li>
+                    <li>Use meaningful variable names within functions.</li>
+                    <li>Consider using constants for values that won't change.</li>
+                    <li>Add comments to explain complex logic.</li>
+                    <li>Indent code properly for readability.</li>
+                    <li>Be mindful of parameter passing methods (by value or by reference) to avoid unintended modifications.</li>
+                    <li>Test your functions thoroughly to ensure they behave as expected.</li>
+                </ul>
+            </p>
 
-            <li><p class="card-text fw-bold">
-                submit event: allows you to respond to when a user submits a form, allowing you to handle the form data or perform validation checks.<br>
-                syntax:
-                <pre>
-                    const myForm = document.querySelector('#myForm');
-
-                    myForm.addEventListener('submit', function(event){
-                        // Do something when the form is submitted.
-                    });
-                </pre>
-            </p></li>
-
-            <li><p class="card-text fw-bold">
-                submit event: allows you to respond to when a user submits a form, allowing you to handle the form data or perform validation checks.<br>
-                syntax:
-                <pre>
-                    window.addEventListener('load', function(event){
-                        // Do something when the page finishes loading.
-                    });
-                </pre>
-            </p></li>
-
-            <li><p class="card-text fw-bold">
-                error event: allows you to respond when an error occurs on the page, which can be useful for debugging or displaying error messages to the user.<br>
-                syntax:
-                <pre>
-                    window.addEventListener('error', function(event){
-                        // Do something when an error occurs on the page.
-                    });
-                </pre>
-            </p></li>
-
-            <li><p class="card-text fw-bold">
-                resize event: allows you to respond when the window is resized, which can be useful for adjusting the layout or resizing elements on the page to fit the new dimensions.<br>
-                syntax:
-                <pre>
-                    window.addEventListener('resize', function(event){
-                        // Do something when the window is resized.
-                    });
-                </pre>
-            </p></li>
-
-            <li><p class="card-text fw-bold">
-                scroll event: allows you to respond when the user scrolls the page, which can be useful for triggering effects or animations that depend on the scroll position, or for creating custom scrolling behavior.<br>
-                syntax:
-                <pre>
-                    window.addEventListener('scroll', function(event){
-                        // Do something when the user scrolls the page.
-                    });
-                </pre>
-            </p></li>
-            </ol>
+            <p>
+                <strong>Additional Tips:-</strong>
+                <ul type="circle">
+                    <li><b>Choose the right library or API: </b>Depending on your target platform and needs, you'll use a platform-specific API (like Windows API) or portable libraries like POSIX (for Unix-like systems).</li>
+                    <li><b>Understand the security implications: </b>Be cautious when accessing system resources and privileges. Use well-established libraries and follow security best practices.</li>
+                    <li><b>Check error handling: </b>Always handle potential errors returned by system calls to prevent crashes or unexpected behavior.</li>
+                    <li><b>Use resources management wisely: </b>Manage resources like file handles, memory, and threads efficiently to avoid leaks or deadlocks.</li>
+                </ul>
+            </p>
             <!-- Add more paragraphs as needed -->
 
             <!-- Back to blog button -->
@@ -250,7 +201,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
-
 
 </body>
 </html>
