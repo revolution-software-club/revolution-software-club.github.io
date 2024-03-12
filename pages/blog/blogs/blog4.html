@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RSDC | blog 1</title>
+  <title>RSDC | blog 4</title>
   <link rel="stylesheet" href="blog-post.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -85,47 +85,66 @@
         <div class="card my-3">
           <div class="card-body">
             <!-- Blog post title -->
-            <h1 class="card-title text-center">Neuromorphic Computing</h1>
+            <h1 class="card-title text-center">Functions in C++</h1>
             <!-- Blog post author and date -->
-            <p class="text-center">Written by Aakanksha Darekar</p>
+            <p class="text-center">Written by Sumeet Gupta</p>
             <!-- Blog post image -->
             <div class="d-flex justify-content-center mb-3">
-              <img src="../blogs/content images/neuromorph.jpg" alt="Neuromorphic Computing" class="img-fluid">
+              <img src="../blogs/content images/cpp.png" alt="cpp image" class="img-fluid">
             </div>
             <!-- Blog post content -->
-            <p class="card-text fw-bold">
-                It is the method of computer engineering in which elements of a computer are customized after the system in the human brain and nervous system. It is also called as neuromorphic engineering.
-            </p>
             <p>
-                <strong>NEUROMORPHIC TECHNOLOGY CAN BE USED IN THE EXPECTED WAYS:-</strong>
-                <ul type="circle"><li>Autonomous systems, such as robotics, drones, self-driving cars and artificial intelligence.</li>
-                    <li>Deep learning applications.</li>
+                <strong>What is a Funtion:<br></strong>
+                This tells the compiler about the function's existence, its name, return type, and parameters (if any).
+                It's like creating a blueprint for the function.
+            </p>
+
+            <p>
+                <strong>Syntax:<br></strong>
+                <pre>return_type funtion_name(parameter_list)</pre>
+            </p>
+
+            <p>
+                <strong>Key concepts:-</strong>
+                <ul type="disc">
+                    <li><b>Blocks of code: </b>Functions are self-contained units that encapsulate a specific task or calculation. They improve code structure and readability.</li>
+                    <li><b>Declaration and definition: </b>You declare a function's name, return type, and parameters first, and then define its body with statements.</li>
+                    <li><b>Parameters: </b>Variables that receive values when the function is called. They can be passed by value (copy passed) or by reference (original variable modified).</li>
+                    <li><b>Return type: </b>The data type (e.g., int, double, void) of the value the function returns when it finishes execution. void means no value is returned.</li>
+                    <li><b>Calling functions: </b>Use the function name followed by parentheses, optionally with arguments passed within.</li>
                 </ul>
             </p>
 
             <p>
-                <strong>HOW DOES THIS WORK?</strong>
-                <ul type="circle"><li>Neuromorphic computing begins with installation of Artificial Neural Networks(ANN) which consists of  millions of neurons.</li>
-                    <li>The most common form of neuromorphic hardware is the spiking neural network (SNN). In this hardware, nodes -- or spiking neurons -- process and hold data like biological neurons.Artificial synaptic devices connect spiking neurons. These devices use analog circuitry to transfer electrical signals that mimic brain signals.
-                    </li>
+                <strong>Common Uses:-</strong>
+                <ul type="circle">
+                    <li><b>Reusability: </b>Create modular, reusable code. Write a function once and use it multiple times throughout your program.</li>
+                    <li><b>Organization: </b>Break down complex tasks into smaller, well-defined functions, making code easier to understand and maintain.</li>
+                    <li><b>Abstraction: </b>Hide implementation details within functions, promoting cleaner interfaces and focus on what the function does.</li>
+                    <li><b>Calculations: </b>Perform computations using functions dedicated to specific calculations.</li>
                 </ul>
             </p>
 
             <p>
-                <strong>FEATURES OF NEUROMORPHIC COMPUTING:-</strong>
-                <ul type="circle">
-                    <li>Rapid response system</li>
-                    <li>Low consumption of power</li>
-                    <li>Mobile Architecture</li>
-                    <li>Fast-paced learning</li>
-                    <li>High adaptability and plasticity</li>
+                <strong>Important Notes:-</strong>
+                <ul type="disc">
+                    <li>Function names should be meaningful and descriptive of their purpose.</li>
+                    <li>Use meaningful variable names within functions.</li>
+                    <li>Consider using constants for values that won't change.</li>
+                    <li>Add comments to explain complex logic.</li>
+                    <li>Indent code properly for readability.</li>
+                    <li>Be mindful of parameter passing methods (by value or by reference) to avoid unintended modifications.</li>
+                    <li>Test your functions thoroughly to ensure they behave as expected.</li>
                 </ul>
-                <strong>CHALLENGES:-</strong>
+            </p>
+
+            <p>
+                <strong>Additional Tips:-</strong>
                 <ul type="circle">
-                    <li>Accuracy</li>
-                    <li>limited software and algorithm</li>
-                    <li>Inaccessible</li>
-                    <li>Benchmarks</li>
+                    <li><b>Choose the right library or API: </b>Depending on your target platform and needs, you'll use a platform-specific API (like Windows API) or portable libraries like POSIX (for Unix-like systems).</li>
+                    <li><b>Understand the security implications: </b>Be cautious when accessing system resources and privileges. Use well-established libraries and follow security best practices.</li>
+                    <li><b>Check error handling: </b>Always handle potential errors returned by system calls to prevent crashes or unexpected behavior.</li>
+                    <li><b>Use resources management wisely: </b>Manage resources like file handles, memory, and threads efficiently to avoid leaks or deadlocks.</li>
                 </ul>
             </p>
             <!-- Add more paragraphs as needed -->

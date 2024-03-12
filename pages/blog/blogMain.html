@@ -1,411 +1,474 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RSDC | blogs</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-    crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RSDC | blogs</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous">
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="./blogMain.css">
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="./blogMain.css" />
+  </head>
 
-<body>
-
-  <!--====== NAVBAR ======-->
-  <nav class="navbar navbar-expand-sm navbar-light">
-    <div class="container">
-      <a href="/index.html" class="d-flex align-items-center gap-2 text-decoration-none">
-        <img id="logo" src="../../Images/rsdc_logo.svg" alt="">
-        <h4 style="color: black;"><b> RSDC </b></h4>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-        <ul class="navbar-nav ">
-          <li class=" nav-item">
-            <a class="nav-link" href="#">About us</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              Departments
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="/pages/departments/HR.html">HR Department</a></li>
-              <li><a class="dropdown-item" href="/pages/departments/Tech.html">Technical Department</a></li>
-              <li><a class="dropdown-item" href="/pages/departments/social.html">Social Department</a></li>
-              <li><a class="dropdown-item" href="/pages/departments/design.html">Design Department</a></li>
-              <li><a class="dropdown-item" href="/pages/departments/project.html">Project Department</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../leads.html">Leads</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../blog/blogMain.html">Blog</a>
-          </li>
-          <button class="btn btn-outline-primary" type="submit">Join Now</button>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Search bar container -->
-  <div class="container">
-    <h2 class="text-center">Search your favorite content & learn with RSDC</h2>
-    <div class="search">
-      <input type="text" class="search-input" placeholder="Search..." name="">
-      <a href="#" class="search-icon"> <i class="fa fa-search"></i> </a>
-    </div>
-  </div>
-
-  <!-- main content -->
-  <section class=" my-5">
-    <div class="container">
-      <div class="row" id="blog-posts-container">
-
-        <div class="col-md-6 col-lg-4">
-          <div class="card my-3">
-            <div class="d-flex align-items-center justify-content-center">
-              <img src="../../Images/rsdc_logo.svg" class="card-image-top" alt="">
-            </div>
-            <div class="card-body">
-              <h3 class="card-title"><a href="#" class="text-secondary">What is HTML</a></h3>
-              <p class="card-text">HTML stands for Hyper Text Markup Language, It helps to learn web development and
-                designing. </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <a href="#" class="btn btn-primary">Read More</a>
-                <div>
-                  <i class="fas fa-eye"></i>
-                  <span> 67 Views</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="card my-3">
-            <div class="d-flex align-items-center justify-content-center">
-              <img src="../../Images/rsdc_logo.svg" class="card-image-top" alt="">
-            </div>
-            <div class="card-body">
-              <h3 class="card-title"><a href="#" class="text-secondary">What is HTML</a></h3>
-              <p class="card-text">HTML stands for Hyper Text Markup Language, It helps to learn web development and
-                designing. </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <a href="#" class="btn btn-primary">Read More</a>
-                <div>
-                  <i class="fas fa-eye"></i>
-                  <span> 67 Views</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="card my-3">
-            <div class="d-flex align-items-center justify-content-center">
-              <img src="../../Images/rsdc_logo.svg" class="card-image-top" alt="">
-            </div>
-            <div class="card-body">
-              <h3 class="card-title"><a href="#" class="text-secondary">What is HTML</a></h3>
-              <p class="card-text">HTML stands for Hyper Text Markup Language, It helps to learn web development and
-                designing. </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <a href="#" class="btn btn-primary">Read More</a>
-                <div>
-                  <i class="fas fa-eye"></i>
-                  <span> 67 Views</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="card my-3">
-            <div class="d-flex align-items-center justify-content-center">
-              <img src="../../Images/rsdc_logo.svg" class="card-image-top" alt="">
-            </div>
-            <div class="card-body">
-              <h3 class="card-title"><a href="#" class="text-secondary">What is HTML</a></h3>
-              <p class="card-text">HTML stands for Hyper Text Markup Language, It helps to learn web development and
-                designing. </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <a href="#" class="btn btn-primary">Read More</a>
-                <div>
-                  <i class="fas fa-eye"></i>
-                  <span> 67 Views</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="card my-3">
-            <div class="d-flex align-items-center justify-content-center">
-              <img src="../../Images/rsdc_logo.svg" class="card-image-top" alt="">
-            </div>
-            <div class="card-body">
-              <h3 class="card-title"><a href="#" class="text-secondary">What is HTML</a></h3>
-              <p class="card-text">HTML stands for Hyper Text Markup Language, It helps to learn web development and
-                designing. </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <a href="#" class="btn btn-primary">Read More</a>
-                <div>
-                  <i class="fas fa-eye"></i>
-                  <span> 67 Views</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="card my-3">
-            <div class="d-flex align-items-center justify-content-center">
-              <img src="../../Images/rsdc_logo.svg" class="card-image-top" alt="">
-            </div>
-            <div class="card-body">
-              <h3 class="card-title"><a href="#" class="text-secondary">What is HTML</a></h3>
-              <p class="card-text">HTML stands for Hyper Text Markup Language, It helps to learn web development and
-                designing. </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <a href="#" class="btn btn-primary">Read More</a>
-                <div>
-                  <i class="fas fa-eye"></i>
-                  <span> 67 Views</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="card my-3">
-            <div class="d-flex align-items-center justify-content-center">
-              <img src="../../Images/rsdc_logo.svg" class="card-image-top" alt="">
-            </div>
-            <div class="card-body">
-              <h3 class="card-title"><a href="#" class="text-secondary">What is HTML</a></h3>
-              <p class="card-text">HTML stands for Hyper Text Markup Language, It helps to learn web development and
-                designing. </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <a href="#" class="btn btn-primary">Read More</a>
-                <div>
-                  <i class="fas fa-eye"></i>
-                  <span> 67 Views</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="card my-3">
-            <div class="d-flex align-items-center justify-content-center">
-              <img src="../../Images/rsdc_logo.svg" class="card-image-top" alt="">
-            </div>
-            <div class="card-body">
-              <h3 class="card-title"><a href="#" class="text-secondary">What is HTML</a></h3>
-              <p class="card-text">HTML stands for Hyper Text Markup Language, It helps to learn web development and
-                designing. </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <a href="#" class="btn btn-primary">Read More</a>
-                <div>
-                  <i class="fas fa-eye"></i>
-                  <span> 67 Views</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="card my-3">
-            <div class="d-flex align-items-center justify-content-center">
-              <img src="../../Images/rsdc_logo.svg" class="card-image-top" alt="">
-            </div>
-            <div class="card-body">
-              <h3 class="card-title"><a href="#" class="text-secondary">What is HTML</a></h3>
-              <p class="card-text">HTML stands for Hyper Text Markup Language, It helps to learn web development and
-                designing. </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <a href="#" class="btn btn-primary">Read More</a>
-                <div>
-                  <i class="fas fa-eye"></i>
-                  <span> 67 Views</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="card my-3">
-            <div class="d-flex align-items-center justify-content-center">
-              <img src="../../Images/rsdc_logo.svg" class="card-image-top" alt="">
-            </div>
-            <div class="card-body">
-              <h3 class="card-title"><a href="#" class="text-secondary">What is HTML</a></h3>
-              <p class="card-text">HTML stands for Hyper Text Markup Language, It helps to learn web development and
-                designing. </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <a href="#" class="btn btn-primary">Read More</a>
-                <div>
-                  <i class="fas fa-eye"></i>
-                  <span> 67 Views</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="card my-3">
-            <div class="d-flex align-items-center justify-content-center">
-              <img src="../../Images/rsdc_logo.svg" class="card-image-top" alt="">
-            </div>
-            <div class="card-body">
-              <h3 class="card-title"><a href="#" class="text-secondary">What is HTML</a></h3>
-              <p class="card-text">HTML stands for Hyper Text Markup Language, It helps to learn web development and
-                designing. </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <a href="#" class="btn btn-primary">Read More</a>
-                <div>
-                  <i class="fas fa-eye"></i>
-                  <span> 67 Views</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="card my-3">
-            <div class="d-flex align-items-center justify-content-center">
-              <img src="../../Images/rsdc_logo.svg" class="card-image-top" alt="">
-            </div>
-            <div class="card-body">
-              <h3 class="card-title"><a href="#" class="text-secondary">What is HTML</a></h3>
-              <p class="card-text">HTML stands for Hyper Text Markup Language, It helps to learn web development and
-                designing. </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <a href="#" class="btn btn-primary">Read More</a>
-                <div>
-                  <i class="fas fa-eye"></i>
-                  <span> 67 Views</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Load more and show less buttons -->
-    <div class="text-center">
-      <button class="btn btn-primary load-more-button">Load More</button>
-      <button class="btn btn-secondary show-less-button" style="display:none;">Show Less</button>
-    </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-light">
-    <!-- Grid container -->
-    <div class="container p-4">
-      <!--Grid row-->
-      <div class="row">
-        <!--Grid column-->
-        <div class="col-lg-10 col-md-12 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Revolution Software Development Club</h5>
-          <p>
-            Connecting Tech Enthusiats
-          </p>
-        </div>
-        <!--Grid column-->
-
-        <!--Grid column-->
-        <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
-
-          <ul class="list-unstyled">
-            <li>
-              <a href="#!" class="text-body" style="text-decoration: none;">FAQs</a>
+  <body>
+    <!--====== NAVBAR ======-->
+    <nav class="navbar navbar-expand-sm navbar-light">
+      <div class="container">
+        <a
+          href="../../index.html" class="d-flex align-items-center gap-2 text-decoration-none">
+          <img id="logo" src="../../Images/rsdc_logo.svg" alt="" />
+          <h4 style="color: black"><b> RSDC </b></h4>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="../about.html">About us</a>
             </li>
-            <li>
-              <a href="#!" class="text-body" style="text-decoration: none;">Get Help</a>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false">Departments
+              </a>
+
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="../departments/HR.html">HR Department</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../departments/Tech.html">Technical Department</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../departments/social.html">Social Department</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../departments/design.html">Design Department</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../departments/project.html">Project Department</a>
+                </li>
+              </ul>
             </li>
-            <li>
-              <a href="#!" class="text-body" style="text-decoration: none;">Contact Support</a>
+            <li class="nav-item">
+              <a class="nav-link" href="../leads.html">Leads</a>
             </li>
-            <li>
-              <a href="#!" class="text-body" style="text-decoration: none;">Reach Out to Us</a>
+            <li class="nav-item">
+              <a class="nav-link" href="../blog/blogMain.html">Blog</a>
             </li>
+            <button class="btn btn-outline-primary" type="submit">
+              Join Now
+            </button>
           </ul>
         </div>
-        <!--Grid column-->
       </div>
-      <!--Grid row-->
+    </nav>
+
+    <!-- Search bar container -->
+    <div class="container">
+      <h2 class="text-center">
+        Search your favorite content & learn with RSDC
+      </h2>
+      <div class="search">
+        <input
+          type="text"
+          class="search-input"
+          placeholder="Search..."
+          name=""
+        />
+        <a href="#" class="search-icon"> <i class="fa fa-search"></i> </a>
+      </div>
     </div>
-    <!-- Grid container -->
-  </footer>
 
+    <!-- main content -->
+    <section class="my-5">
+      <div class="container">
+        <div class="row" id="blog-posts-container">
+          
+          <div class="col-md-6 col-lg-4">
+            <div class="card my-3">
+              <div class="image-container d-flex align-items-center justify-content-center">
+                <img src="../blog/blogs/content images/neuromorph.jpg" class="card-image-top" alt=""/>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">
+                  <a href="../blog/blogs/blog1.html" class="text-secondary">Neuromorphic Computing</a>
+                </h3>
+                <p class="card-text">
+                  It is the method of computer engineering where elements of computer are...
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <a href="../blog/blogs/blog1.html" class="btn btn-primary">Read More</a>
+                  <div>
+                    <i class="fas fa-eye"></i>
+                    <span> 67 Views</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-  <script>
-    // JavaScript for load more and show less functionality
-    $(document).ready(function () {
-      // Initial number of visible posts
-      var visiblePosts = 6;
-  
-      // Function to toggle visibility of blog posts
-      function togglePostsVisibility() {
-        $("#blog-posts-container .card").slice(0, visiblePosts).show();
-        $("#blog-posts-container .card").slice(visiblePosts).hide();
-      }
-  
-      // Call the function initially
-      togglePostsVisibility();
-  
-      // Function to load more posts
-      $(".load-more-button").click(function () {
-        visiblePosts += 6;
-        togglePostsVisibility();
-        // Show the show less button
-        $(".show-less-button").show();
-        // Check if all posts are visible, then hide load more button
-        if ($("#blog-posts-container .card:hidden").length === 0) {
-          $(".load-more-button").hide();
+          <div class="col-md-6 col-lg-4">
+            <div class="card my-3">
+              <div class="image-container d-flex align-items-center justify-content-center">
+                <img src="../blog/blogs/content images/js-e.jpeg" class="card-image-top" alt=""/>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">
+                  <a href="../blog/blogs/blog2.html" class="text-secondary">JS Events</a>
+                </h3>
+                <p class="card-text">
+                  Learn Different JS Event that are very usefull for your website...
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <a href="../blog/blogs/blog2.html" class="btn btn-primary">Read More</a>
+                  <div>
+                    <i class="fas fa-eye"></i>
+                    <span> 67 Views</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card my-3">
+              <div class="image-container d-flex align-items-center justify-content-center">
+                <img src="../blog/blogs/content images/singularity.jpg" class="card-image-top" alt=""/>
+              </div>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="../blog/blogs/blog3.html" class="text-secondary">Technological singularity theory</a>
+                </h4>
+                <p class="card-text">
+                  TST typically describes the conjectural future where the technologies have taken over...
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <a href="../blog/blogs/blog3.html" class="btn btn-primary">Read More</a>
+                  <div>
+                    <i class="fas fa-eye"></i>
+                    <span> 67 Views</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card my-3">
+              <div class="image-container d-flex align-items-center justify-content-center">
+                <img src="../blog/blogs/content images/cpp.png" class="card-image-top" alt=""/>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">
+                  <a href="../blog/blogs/blog4.html" class="text-secondary">Functions in C++</a>
+                </h3>
+                <p class="card-text">
+                  This tells the compiler about the function's existence, its name, return type, and parameters (if any)....
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <a href="../blog/blogs/blog4.html" class="btn btn-primary">Read More</a>
+                  <div>
+                    <i class="fas fa-eye"></i>
+                    <span> 67 Views</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card my-3">
+              <div class="image-container d-flex align-items-center justify-content-center">
+                <img src="../blog/blogs/content images/ai-bard1.jpg" class="card-image-top" alt=""/>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">
+                  <a href="../blog/blogs/blog5.html" class="text-secondary">News Letter</a>
+                </h3>
+                <p class="card-text">
+                  Google's AI Assistant Bard Unveils Exciting New Capabilities...
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <a href="../blog/blogs/blog5.html" class="btn btn-primary">Read More</a>
+                  <div>
+                    <i class="fas fa-eye"></i>
+                    <span> 67 Views</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card my-3">
+              <div class="image-container d-flex align-items-center justify-content-center">
+                <img src="../blog/blogs/content images/strc.png" class="card-image-top" alt=""/>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">
+                  <a href="../blog/blogs/blog6.html" class="text-secondary">Strings in C</a>
+                </h3>
+                <p class="card-text">
+                  A String in C programming is a sequence, stored as an array of characters...
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <a href="../blog/blogs/blog6.html" class="btn btn-primary">Read More</a>
+                  <div>
+                    <i class="fas fa-eye"></i>
+                    <span> 67 Views</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card my-3">
+              <div class="image-container d-flex align-items-center justify-content-center">
+                <img src="../blog/blogs/content images/devops.jpg" class="card-image-top" alt=""/>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">
+                  <a href="../blog/blogs/blog7.html" class="text-secondary">What is DevOps?</a>
+                </h3>
+                <p class="card-text">
+                  DevOps is a collaboration between development and IT operation...
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <a href="../blog/blogs/blog7.html" class="btn btn-primary">Read More</a>
+                  <div>
+                    <i class="fas fa-eye"></i>
+                    <span> 67 Views</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card my-3">
+              <div class="image-container d-flex align-items-center justify-content-center">
+                <img src="../../Images/rsdc_logo.svg" class="card-image-top" alt=""/>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">
+                  <a href="#" class="text-secondary">What is HTML</a>
+                </h3>
+                <p class="card-text">
+                  HTML stands for Hyper Text Markup Language, It helps to learn
+                  web development and designing.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <a href="#" class="btn btn-primary">Read More</a>
+                  <div>
+                    <i class="fas fa-eye"></i>
+                    <span> 67 Views</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card my-3">
+              <div class="image-container d-flex align-items-center justify-content-center">
+                <img src="../../Images/rsdc_logo.svg" class="card-image-top" alt=""/>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">
+                  <a href="#" class="text-secondary">What is HTML</a>
+                </h3>
+                <p class="card-text">
+                  HTML stands for Hyper Text Markup Language, It helps to learn
+                  web development and designing.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <a href="#" class="btn btn-primary">Read More</a>
+                  <div>
+                    <i class="fas fa-eye"></i>
+                    <span> 67 Views</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card my-3">
+              <div class="image-container d-flex align-items-center justify-content-center">
+                <img src="../../Images/rsdc_logo.svg" class="card-image-top" alt=""/>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">
+                  <a href="#" class="text-secondary">What is HTML</a>
+                </h3>
+                <p class="card-text">
+                  HTML stands for Hyper Text Markup Language, It helps to learn
+                  web development and designing.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <a href="#" class="btn btn-primary">Read More</a>
+                  <div>
+                    <i class="fas fa-eye"></i>
+                    <span> 67 Views</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card my-3">
+              <div class="image-container d-flex align-items-center justify-content-center">
+                <img src="../../Images/rsdc_logo.svg" class="card-image-top" alt=""/>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">
+                  <a href="#" class="text-secondary">What is HTML</a>
+                </h3>
+                <p class="card-text">
+                  HTML stands for Hyper Text Markup Language, It helps to learn
+                  web development and designing.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <a href="#" class="btn btn-primary">Read More</a>
+                  <div>
+                    <i class="fas fa-eye"></i>
+                    <span> 67 Views</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card my-3">
+              <div class="image-container d-flex align-items-center justify-content-center">
+                <img src="../../Images/rsdc_logo.svg" class="card-image-top" alt=""/>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">
+                  <a href="#" class="text-secondary">What is HTML</a>
+                </h3>
+                <p class="card-text">
+                  HTML stands for Hyper Text Markup Language, It helps to learn
+                  web development and designing.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <a href="#" class="btn btn-primary">Read More</a>
+                  <div>
+                    <i class="fas fa-eye"></i>
+                    <span> 67 Views</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Load more and show less buttons -->
+          <div class="text-center">
+            <button class="btn btn-primary load-more-button">Load More</button>
+            <button class="btn btn-secondary show-less-button" style="display: none">Show Less</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-light">
+      <!-- Grid container -->
+      <div class="container p-4">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-lg-10 col-md-12 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Revolution Software Development Club</h5>
+            <p>Connecting Tech Enthusiats</p>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!" class="text-body" style="text-decoration: none">FAQs</a>
+              </li>
+              <li>
+                <a href="#!" class="text-body" style="text-decoration: none">Get Help</a>
+              </li>
+              <li>
+                <a href="#!" class="text-body" style="text-decoration: none">Contact Support</a>
+              </li>
+              <li>
+                <a href="#!" class="text-body" style="text-decoration: none">Reach Out to Us</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </div>
+      <!-- Grid container -->
+    </footer>
+
+    <script>
+      // JavaScript for load more and show less functionality
+      $(document).ready(function () {
+        // Initial number of visible posts
+        var visiblePosts = 6;
+
+        // Function to toggle visibility of blog posts
+        function togglePostsVisibility() {
+          $("#blog-posts-container .card").slice(0, visiblePosts).show();
+          $("#blog-posts-container .card").slice(visiblePosts).hide();
         }
-      });
-  
-      // Function to show less posts
-      $(".show-less-button").click(function () {
-        visiblePosts = 6;
-        togglePostsVisibility();
-        // Hide the show less button
-        $(".show-less-button").hide();
-        // Show the load more button
-        $(".load-more-button").show();
-      });
-    });
-  </script>  
-    
-</body>
 
+        // Call the function initially
+        togglePostsVisibility();
+
+        // Function to load more posts
+        $(".load-more-button").click(function () {
+          visiblePosts += 6;
+          togglePostsVisibility();
+          // Show the show less button
+          $(".show-less-button").show();
+          // Check if all posts are visible, then hide load more button
+          if ($("#blog-posts-container .card:hidden").length === 0) {
+            $(".load-more-button").hide();
+          }
+        });
+
+        // Function to show less posts
+        $(".show-less-button").click(function () {
+          visiblePosts = 6;
+          togglePostsVisibility();
+          // Hide the show less button
+          $(".show-less-button").hide();
+          // Show the load more button
+          $(".load-more-button").show();
+        });
+      });
+    </script>
+  </body>
 </html>
